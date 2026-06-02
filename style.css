@@ -1,0 +1,214 @@
+/*
+Theme Name:   ST4RIS
+Description:  Child theme for the ST4RIS project website
+Author:       ST4RIS Consortium
+Template:     twentytwentyfour
+Version:      1.0.0
+License:      GNU General Public License v2 or later
+License URI:  https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  st4ris
+*/
+
+/* ── Global resets ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Sticky nav ─────────────────────────────────────────────── */
+.wp-block-template-part.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--wp--preset--color--st4ris-navy);
+}
+
+/* ── Navigation links ───────────────────────────────────────── */
+.wp-block-navigation a {
+  color: #b8d4d4 !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  padding-bottom: 2px;
+}
+.wp-block-navigation a:hover {
+  color: #ffffff !important;
+  border-bottom-color: var(--wp--preset--color--st4ris-green);
+}
+
+/* ── Hero section ───────────────────────────────────────────── */
+.st4ris-hero {
+  background: var(--wp--preset--color--st4ris-navy);
+  color: #fff;
+}
+.st4ris-hero-photos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  height: 180px;
+  overflow: hidden;
+}
+.st4ris-hero-photos > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+/* ── Feature cards ──────────────────────────────────────────── */
+.st4ris-card {
+  border: 1.5px solid var(--wp--preset--color--st4ris-border);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+  transition: box-shadow 0.2s;
+}
+.st4ris-card:hover {
+  box-shadow: 0 4px 16px rgba(15,110,86,0.1);
+}
+.st4ris-card-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--wp--preset--color--st4ris-teal);
+  margin-bottom: 0.25rem;
+}
+
+/* ── Staff story carousel ───────────────────────────────────── */
+.st4ris-stories {
+  background: var(--wp--preset--color--st4ris-navy);
+  color: #fff;
+  padding: 3rem 2rem;
+}
+.st4ris-stories h2 { color: #fff !important; }
+
+.st4ris-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  overflow: hidden;
+}
+.st4ris-story-slide {
+  min-width: 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.st4ris-story-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid var(--wp--preset--color--st4ris-green);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.st4ris-story-slide blockquote {
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #d4eee8;
+  margin: 0;
+}
+.st4ris-story-slide blockquote footer {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--wp--preset--color--st4ris-green);
+  font-style: normal;
+  font-weight: 600;
+}
+.st4ris-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.st4ris-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #4a7a7a;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.st4ris-dot.active { background: var(--wp--preset--color--st4ris-green); }
+
+/* ── Events grid ────────────────────────────────────────────── */
+.st4ris-events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 768px) {
+  .st4ris-events-grid { grid-template-columns: 1fr; }
+  .st4ris-hero-photos { grid-template-columns: repeat(3, 1fr); }
+  .st4ris-story-slide { flex-direction: column; }
+}
+.st4ris-event-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.25rem;
+  border: 1.5px solid var(--wp--preset--color--st4ris-border);
+}
+.st4ris-event-type {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.st4ris-event-type.event       { color: #d85a30; }
+.st4ris-event-type.achievement { color: var(--wp--preset--color--st4ris-teal); }
+
+/* ── Consortium logo pills ──────────────────────────────────── */
+.st4ris-logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+.st4ris-logo-pill {
+  background: var(--wp--preset--color--st4ris-light);
+  border: 1.5px solid var(--wp--preset--color--st4ris-border);
+  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--st4ris-teal);
+}
+
+/* ── Buttons ────────────────────────────────────────────────── */
+.st4ris-btn-primary {
+  background: var(--wp--preset--color--st4ris-navy);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+.st4ris-btn-primary:hover { background: var(--wp--preset--color--st4ris-teal); color: #fff; }
+
+.st4ris-btn-green {
+  background: var(--wp--preset--color--st4ris-green);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: inline-block;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+.st4ris-btn-green:hover { background: var(--wp--preset--color--st4ris-teal); color: #fff; }
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.wp-block-template-part.site-footer {
+  background: var(--wp--preset--color--st4ris-navy);
+  color: #9abfbf;
+}
+.wp-block-template-part.site-footer a { color: #9abfbf; }
+.wp-block-template-part.site-footer a:hover { color: var(--wp--preset--color--st4ris-green); }
