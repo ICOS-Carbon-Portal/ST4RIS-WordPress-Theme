@@ -49,7 +49,7 @@
     <div class="cards">
       <div class="card">
         <div class="card-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h9.5a3.5 3.5 0 0 1 3.5 3.5v11H7.5A3.5 3.5 0 0 1 4 16.5z"/><path d="M7 5.5v11A3.5 3.5 0 0 0 10.5 20"/><path d="M8.5 9.5h7"/><path d="M8.5 13h5"/><path d="M18 4l1 2 2 .4-1.5 1.5.3 2.1L18 9l-1.8 1 .3-2.1L15 6.4l2-.4z"/></svg>
+          <img src="/wp-content/themes/st4ris/assets/icons/training.png" width="96" height="67" alt="" aria-hidden="true" loading="lazy">
         </div>
         <div>
           <div class="card-label">Training</div>
@@ -59,7 +59,7 @@
       </div>
       <div class="card">
         <div class="card-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.25"/><path d="M5 20a7 7 0 0 1 14 0"/><path d="M16.5 12.5l1.1 2.25 2.5.35-1.8 1.75.45 2.45-2.25-1.18-2.25 1.18.45-2.45-1.8-1.75 2.5-.35z"/></svg>
+          <img src="/wp-content/themes/st4ris/assets/icons/recognition.png" width="83" height="96" alt="" aria-hidden="true" loading="lazy">
         </div>
         <div>
           <div class="card-label">Recognition</div>
@@ -69,7 +69,7 @@
       </div>
       <div class="card">
         <div class="card-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/><path d="M7.5 7.5h9"/><path d="M7.5 16.5h9"/><path d="M17 12l-2.2-2.2"/><path d="M17 12l-2.2 2.2"/></svg>
+          <img src="/wp-content/themes/st4ris/assets/icons/mobility.png" width="76" height="96" alt="" aria-hidden="true" loading="lazy">
         </div>
         <div>
           <div class="card-label">Mobility</div>
@@ -79,7 +79,7 @@
       </div>
       <div class="card">
         <div class="card-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h11l3 3v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M17 3v4h4"/><path d="M8 15l3-3 2.2 2.2L17 10"/><path d="M8 18h8"/><circle cx="8" cy="8" r="1"/></svg>
+          <img src="/wp-content/themes/st4ris/assets/icons/career-paths.png" width="96" height="63" alt="" aria-hidden="true" loading="lazy">
         </div>
         <div>
           <div class="card-label">Career Paths</div>
