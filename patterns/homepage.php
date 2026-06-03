@@ -159,19 +159,6 @@
   </div>
 </section>
 
-<!-- ATLAS CTA -->
-<section class="cta-section" id="atlas">
-  <div class="inner" style="text-align:center">
-    <h2 style="margin-bottom:.75rem">The ST4RIS Atlas</h2>
-    <p style="color:#4a6a6a;max-width:600px;margin:0 auto 1.5rem;line-height:1.7">A central digital platform connecting training, certification, and mobility opportunities across European research infrastructures. Discover learning pathways, certifications, and exchange programmes, all in one place.</p>
-    <div class="cta-inner" style="padding:0">
-      <a class="btn-primary" href="#">Access the ST4RIS Atlas</a>
-      <a class="btn-outline" href="#involved">Take the survey →</a>
-    </div>
-    <p style="margin-top:.75rem;font-size:.8rem;color:#9abfbf">Atlas launching soon. Stay tuned</p>
-  </div>
-</section>
-
 <!-- GET INVOLVED -->
 <section class="involved" id="involved">
   <div class="inner">
