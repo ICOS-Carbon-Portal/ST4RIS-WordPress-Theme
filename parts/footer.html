@@ -1,54 +1,11 @@
-<!-- wp:group {"className":"site-footer","style":{"color":{"background":"#1a3a4a"},"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem","left":"2rem","right":"2rem"}}},"layout":{"type":"constrained","contentSize":"1100px"}} -->
-<div class="wp-block-group site-footer" style="background-color:#1a3a4a;padding:1.5rem 2rem">
-
-  <!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between","alignItems":"center","flexWrap":"wrap"}} -->
-  <div class="wp-block-group">
-
-    <!-- EU funded badge -->
-    <!-- wp:html -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" height="48" aria-label="Funded by the European Union">
-      <rect width="120" height="80" fill="#003399"/>
-      <g fill="#FFCC00" transform="translate(60,40)">
-        <polygon points="0,-5 1.18,-1.62 4.75,-1.54 1.90,0.62 2.94,4.05 0,2 -2.94,4.05 -1.90,0.62 -4.75,-1.54 -1.18,-1.62" transform="rotate(0) translate(0,-28)"/>
-        <polygon points="0,-5 1.18,-1.62 4.75,-1.54 1.90,0.62 2.94,4.05 0,2 -2.94,4.05 -1.90,0.62 -4.75,-1.54 -1.18,-1.62" transform="rotate(30) translate(0,-28)"/>
-        <polygon points="0,-5 1.18,-1.62 4.75,-1.54 1.90,0.62 2.94,4.05 0,2 -2.94,4.05 -1.90,0.62 -4.75,-1.54 -1.18,-1.62" transform="rotate(60) translate(0,-28)"/>
-        <polygon points="0,-5 1.18,-1.62 4.75,-1.54 1.90,0.62 2.94,4.05 0,2 -2.94,4.05 -1.90,0.62 -4.75,-1.54 -1.18,-1.62" transform="rotate(90) translate(0,-28)"/>
-        <polygon points="0,-5 1.18,-1.62 4.75,-1.54 1.90,0.62 2.94,4.05 0,2 -2.94,4.05 -1.90,0.62 -4.75,-1.54 -1.18,-1.62" transform="rotate(120) translate(0,-28)"/>
-        <polygon points="0,-5 1.18,-1.62 4.75,-1.54 1.90,0.62 2.94,4.05 0,2 -2.94,4.05 -1.90,0.62 -4.75,-1.54 -1.18,-1.62" transform="rotate(150) translate(0,-28)"/>
-        <polygon points="0,-5 1.18,-1.62 4.75,-1.54 1.90,0.62 2.94,4.05 0,2 -2.94,4.05 -1.90,0.62 -4.75,-1.54 -1.18,-1.62" transform="rotate(180) translate(0,-28)"/>
-        <polygon points="0,-5 1.18,-1.62 4.75,-1.54 1.90,0.62 2.94,4.05 0,2 -2.94,4.05 -1.90,0.62 -4.75,-1.54 -1.18,-1.62" transform="rotate(210) translate(0,-28)"/>
-        <polygon points="0,-5 1.18,-1.62 4.75,-1.54 1.90,0.62 2.94,4.05 0,2 -2.94,4.05 -1.90,0.62 -4.75,-1.54 -1.18,-1.62" transform="rotate(240) translate(0,-28)"/>
-        <polygon points="0,-5 1.18,-1.62 4.75,-1.54 1.90,0.62 2.94,4.05 0,2 -2.94,4.05 -1.90,0.62 -4.75,-1.54 -1.18,-1.62" transform="rotate(270) translate(0,-28)"/>
-        <polygon points="0,-5 1.18,-1.62 4.75,-1.54 1.90,0.62 2.94,4.05 0,2 -2.94,4.05 -1.90,0.62 -4.75,-1.54 -1.18,-1.62" transform="rotate(300) translate(0,-28)"/>
-        <polygon points="0,-5 1.18,-1.62 4.75,-1.54 1.90,0.62 2.94,4.05 0,2 -2.94,4.05 -1.90,0.62 -4.75,-1.54 -1.18,-1.62" transform="rotate(330) translate(0,-28)"/>
-      </g>
-      <text x="132" y="28" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Funded by</text>
-      <text x="132" y="46" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">the European</text>
-      <text x="132" y="64" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Union</text>
-    </svg>
-    <!-- /wp:html -->
-
-    <!-- Legal links -->
-    <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"},"style":{"spacing":{"blockGap":"1.5rem"}}} -->
-    <div class="wp-block-group">
-      <!-- wp:navigation {"textColor":"white","fontSize":"small","overlayMenu":"never","layout":{"type":"flex","flexWrap":"wrap"}} -->
-        <!-- wp:navigation-link {"label":"Legal notice","url":"/legal"} /-->
-        <!-- wp:navigation-link {"label":"Privacy policy","url":"/privacy"} /-->
-        <!-- wp:navigation-link {"label":"Accessibility","url":"/accessibility"} /-->
-      <!-- /wp:navigation -->
+<!-- wp:html -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-eu">
+      <img class="eu-funded-logo footer-eu-funded-logo" src="/wp-content/themes/st4ris/assets/images/EN_FundedbytheEU_RGB_POS.png" alt="Funded by the European Union" loading="lazy">
     </div>
-    <!-- /wp:group -->
-
-    <!-- Social links -->
-    <!-- wp:social-links {"iconColor":"white","iconColorValue":"#ffffff","size":"has-small-icon-size"} -->
-    <ul class="wp-block-social-links has-small-icon-size has-icon-color">
-      <!-- wp:social-link {"url":"https://linkedin.com","service":"linkedin"} /-->
-      <!-- wp:social-link {"url":"https://twitter.com","service":"x"} /-->
-    </ul>
-    <!-- /wp:social-links -->
-
+    <div class="footer-links"><a href="/legal">Legal notice</a><a href="/privacy">Privacy policy</a><a href="/accessibility">Accessibility</a></div>
+    <div class="footer-social"><a href="https://linkedin.com">LinkedIn</a></div>
   </div>
-  <!-- /wp:group -->
-
-</div>
-<!-- /wp:group -->
+</footer>
+<!-- /wp:html -->

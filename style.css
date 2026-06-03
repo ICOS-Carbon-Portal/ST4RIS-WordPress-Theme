@@ -3,212 +3,62 @@ Theme Name:   ST4RIS
 Description:  Child theme for the ST4RIS project website
 Author:       ST4RIS Consortium
 Template:     twentytwentyfour
-Version:      1.0.0
+Version:      1.1.0
 License:      GNU General Public License v2 or later
 License URI:  https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:  st4ris
 */
 
-/* ── Global resets ─────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',Arial,sans-serif;color:#1a2a2a;background:#fff}
+a{text-decoration:none;color:inherit}
+.wp-site-blocks{padding:0!important;margin:0!important}
+.wp-site-blocks > *{margin-block-start:0!important}
+main,.wp-block-post-content,.entry-content{margin:0!important}
+.wp-block-post-content > *{margin-block-start:0!important}
 
-/* ── Sticky nav ─────────────────────────────────────────────── */
-.wp-block-template-part.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--wp--preset--color--st4ris-navy);
-}
+/* NAV */
+.site-header{background:#1a3a4a!important;position:sticky;top:0;z-index:100;padding:0 2rem;width:100%}
+.site-header > .wp-block-group{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0!important}
+.site-header .custom-logo,.site-header .wp-block-site-logo img,.st4ris-header-logo{max-height:36px;width:auto;display:block}.st4ris-header-logo-link{display:flex;align-items:center;flex-shrink:0}.st4ris-main-logo{height:auto}
+.site-header .wp-block-navigation{gap:2rem}
+.site-header .wp-block-navigation a{color:#b8d4d4!important;font-size:.9rem;font-weight:500;padding:4px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;text-decoration:none}
+.site-header .wp-block-navigation a:hover{color:#fff!important;border-bottom-color:#2dc08a}
 
-/* ── Navigation links ───────────────────────────────────────── */
-.wp-block-navigation a {
-  color: #b8d4d4 !important;
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
-  padding-bottom: 2px;
-}
-.wp-block-navigation a:hover {
-  color: #ffffff !important;
-  border-bottom-color: var(--wp--preset--color--st4ris-green);
-}
+/* HERO */
+.hero{background:#1a3a4a;color:#fff}
+.hero-photos{display:grid;grid-template-columns:repeat(6,1fr);height:180px;overflow:hidden}
+.hero-photos div{background:#2a5a5a;overflow:hidden}
+.hero-photos div img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:.85}.hero-photos div:nth-child(1) img,.hero-photos div:nth-child(2) img{object-position:center 38%}.hero-photos div:nth-child(6) img{object-position:center 28%}
+.hero-content{width:calc(100% - 4rem);max-width:1100px;margin:0 auto;padding:2rem 0 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.hero-left{display:flex;align-items:center;gap:1.5rem}.hero-copy{max-width:620px}.hero-heading{font-size:2rem;font-weight:700;letter-spacing:.2px;line-height:1.18;color:#fff;margin:0}.hero-intro{font-size:.95rem;color:#9abfbf;margin-top:.5rem;max-width:560px}.hero-tagline{font-size:1.2rem;color:#d4eee8;font-style:italic;text-align:right;max-width:300px}.eu-badge{background:#fff;border-radius:6px;padding:8px 14px;display:flex;align-items:center;margin-top:.75rem;width:fit-content;margin-left:auto}.eu-funded-logo{display:block;width:195px;max-width:100%;height:auto}
 
-/* ── Hero section ───────────────────────────────────────────── */
-.st4ris-hero {
-  background: var(--wp--preset--color--st4ris-navy);
-  color: #fff;
-}
-.st4ris-hero-photos {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  height: 180px;
-  overflow: hidden;
-}
-.st4ris-hero-photos > * {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.85;
-}
+/* SECTION COMMON */
+section{padding:3rem 2rem}.inner{max-width:1100px;margin:0 auto}h2{font-size:1.5rem;font-weight:700;color:#1a3a4a;margin-bottom:1.5rem;line-height:1.25}h3{line-height:1.3}p{line-height:1.7}
 
-/* ── Feature cards ──────────────────────────────────────────── */
-.st4ris-card {
-  border: 1.5px solid var(--wp--preset--color--st4ris-border);
-  border-radius: 10px;
-  padding: 1.25rem 1.5rem;
-  background: #fff;
-  transition: box-shadow 0.2s;
-}
-.st4ris-card:hover {
-  box-shadow: 0 4px 16px rgba(15,110,86,0.1);
-}
-.st4ris-card-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  color: var(--wp--preset--color--st4ris-teal);
-  margin-bottom: 0.25rem;
-}
+/* INTRO */
+.intro{background:#f5f9f8}.intro p{font-size:1rem;line-height:1.7;color:#2a4a4a;max-width:860px;margin-bottom:.75rem}
 
-/* ── Staff story carousel ───────────────────────────────────── */
-.st4ris-stories {
-  background: var(--wp--preset--color--st4ris-navy);
-  color: #fff;
-  padding: 3rem 2rem;
-}
-.st4ris-stories h2 { color: #fff !important; }
+/* FEATURE CARDS */
+.features{background:#fff}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}.card{border:1.5px solid #c8e6dc;border-radius:10px;padding:1.25rem 1.5rem;display:flex;gap:1rem;align-items:flex-start;background:#fff}.card-icon{background:linear-gradient(135deg,#e0f5ec,#f4fbf8);border:1px solid #c8e6dc;border-radius:10px;padding:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}.card-icon svg{width:30px;height:30px;stroke:#0f6e56;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}.card-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#0f6e56;margin-bottom:.25rem}.card h3{font-size:.95rem;font-weight:600;color:#1a3a4a;margin-bottom:.35rem}.card p{font-size:.85rem;color:#4a6a6a;line-height:1.55}
 
-.st4ris-carousel-track {
-  display: flex;
-  transition: transform 0.5s ease;
-  overflow: hidden;
-}
-.st4ris-story-slide {
-  min-width: 100%;
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-.st4ris-story-avatar {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  border: 3px solid var(--wp--preset--color--st4ris-green);
-  object-fit: cover;
-  flex-shrink: 0;
-}
-.st4ris-story-slide blockquote {
-  font-style: italic;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #d4eee8;
-  margin: 0;
-}
-.st4ris-story-slide blockquote footer {
-  margin-top: 0.75rem;
-  font-size: 0.85rem;
-  color: var(--wp--preset--color--st4ris-green);
-  font-style: normal;
-  font-weight: 600;
-}
-.st4ris-dots {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  margin-top: 1.5rem;
-}
-.st4ris-dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: #4a7a7a;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-.st4ris-dot.active { background: var(--wp--preset--color--st4ris-green); }
+/* STAFF STORIES */
+.stories{background:#1a3a4a;color:#fff}.stories h2{color:#fff}.story-carousel{position:relative;overflow:hidden}.story-track{display:flex;transition:transform .5s ease}.story-slide{min-width:100%;display:flex;gap:2rem;align-items:center;padding:.5rem 0}.story-photo-placeholder{width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,#1d9e75,#0f6e56);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:2rem;border:3px solid #2dc08a}blockquote{font-size:1.05rem;line-height:1.7;color:#d4eee8;font-style:italic}blockquote footer{margin-top:.75rem;font-size:.85rem;color:#2dc08a;font-style:normal;font-weight:600}.story-dots{display:flex;gap:8px;justify-content:center;margin-top:1.5rem}.dot{width:8px;height:8px;border-radius:50%;background:#4a7a7a;border:none;cursor:pointer;padding:0}.dot.active{background:#2dc08a}.story-btns{display:flex;gap:.75rem;justify-content:flex-end;margin-top:.75rem}.story-btns button{background:transparent;border:1.5px solid #4a8a7a;color:#b8d4d4;border-radius:6px;padding:6px 16px;cursor:pointer;font-size:.85rem;transition:background .2s}.story-btns button:hover{background:#2a5a5a}
 
-/* ── Events grid ────────────────────────────────────────────── */
-.st4ris-events-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-}
-@media (max-width: 768px) {
-  .st4ris-events-grid { grid-template-columns: 1fr; }
-  .st4ris-hero-photos { grid-template-columns: repeat(3, 1fr); }
-  .st4ris-story-slide { flex-direction: column; }
-}
-.st4ris-event-card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 1.25rem;
-  border: 1.5px solid var(--wp--preset--color--st4ris-border);
-}
-.st4ris-event-type {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
-.st4ris-event-type.event       { color: #d85a30; }
-.st4ris-event-type.achievement { color: var(--wp--preset--color--st4ris-teal); }
+/* EVENTS */
+.events{background:#f0f8f5}.events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}.event-card{background:#fff;border-radius:10px;padding:1.25rem;border:1.5px solid #c8e6dc}.event-type{font-size:.7rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;margin-bottom:.5rem}.event-type.event{color:#d85a30}.event-type.achievement{color:#0f6e56}.event-card h3{font-size:.95rem;font-weight:600;color:#1a3a4a;margin-bottom:.25rem}.event-card p{font-size:.82rem;color:#4a6a6a}
 
-/* ── Consortium logo pills ──────────────────────────────────── */
-.st4ris-logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
-}
-.st4ris-logo-pill {
-  background: var(--wp--preset--color--st4ris-light);
-  border: 1.5px solid var(--wp--preset--color--st4ris-border);
-  border-radius: 8px;
-  padding: 0.5rem 1.25rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--wp--preset--color--st4ris-teal);
-}
+/* CTA BUTTONS */
+.cta-section{background:#fff;padding:2.5rem 2rem}.cta-inner{max-width:1100px;margin:0 auto;display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}.btn-primary{background:#1a3a4a;color:#fff;border:none;border-radius:8px;padding:.75rem 2rem;font-size:1rem;font-weight:600;cursor:pointer;transition:background .2s;display:inline-block}.btn-primary:hover{background:#0f6e56}.btn-outline{background:transparent;color:#1a3a4a;border:2px solid #1a3a4a;border-radius:8px;padding:.75rem 2rem;font-size:1rem;font-weight:600;cursor:pointer;transition:background .2s,color .2s;display:inline-block}.btn-outline:hover{background:#1a3a4a;color:#fff}
 
-/* ── Buttons ────────────────────────────────────────────────── */
-.st4ris-btn-primary {
-  background: var(--wp--preset--color--st4ris-navy);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: inline-block;
-  transition: background 0.2s;
-  text-decoration: none;
-}
-.st4ris-btn-primary:hover { background: var(--wp--preset--color--st4ris-teal); color: #fff; }
+/* GET INVOLVED */
+.involved{background:#e8f5f0;padding:3rem 2rem}.involved .inner{max-width:860px}.involved p{font-size:1rem;line-height:1.7;color:#2a4a4a;margin-bottom:1rem}.survey-btn{display:inline-block;background:#2dc08a;color:#fff;border-radius:8px;padding:.65rem 1.75rem;font-weight:600;font-size:.95rem;cursor:pointer;border:none;transition:background .2s}.survey-btn:hover{background:#0f6e56;color:#fff}
 
-.st4ris-btn-green {
-  background: var(--wp--preset--color--st4ris-green);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.65rem 1.75rem;
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-  display: inline-block;
-  transition: background 0.2s;
-  text-decoration: none;
-}
-.st4ris-btn-green:hover { background: var(--wp--preset--color--st4ris-teal); color: #fff; }
+/* CONSORTIUM */
+.consortium{background:#fff;padding:3rem 2rem}.consortium p{font-size:1rem;color:#2a4a4a;line-height:1.7;margin-bottom:1.5rem;max-width:700px}.logo-grid{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.logo-pill{background:#f0f8f5;border:1.5px solid #c8e6dc;border-radius:8px;padding:.5rem 1.25rem;font-size:.85rem;font-weight:600;color:#0f6e56}
 
-/* ── Footer ─────────────────────────────────────────────────── */
-.wp-block-template-part.site-footer {
-  background: var(--wp--preset--color--st4ris-navy);
-  color: #9abfbf;
-}
-.wp-block-template-part.site-footer a { color: #9abfbf; }
-.wp-block-template-part.site-footer a:hover { color: var(--wp--preset--color--st4ris-green); }
+/* FOOTER */
+.site-footer{background:#1a3a4a!important;color:#9abfbf;padding:1.5rem 2rem}.site-footer > .wp-block-group,.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}.site-footer a{color:#9abfbf!important}.site-footer a:hover{color:#2dc08a!important}.footer-eu{background:#fff;border-radius:6px;padding:6px 10px}.footer-eu-funded-logo{width:170px}.footer-links{display:flex;gap:1.5rem;font-size:.85rem}.footer-social{display:flex;gap:1rem;font-size:.85rem}
+
+@media (max-width:768px){.site-header{padding:0 1rem}.site-header > .wp-block-group{height:auto;min-height:56px;gap:1rem;flex-wrap:wrap;justify-content:center;padding:.65rem 0!important}.site-header .wp-block-navigation{gap:1rem;justify-content:center}.hero-photos{grid-template-columns:repeat(3,1fr);height:120px}.hero-content{flex-direction:column;align-items:flex-start}.hero-tagline{text-align:left}.eu-badge{margin-left:0}.cards,.events-grid{grid-template-columns:1fr}.story-slide{flex-direction:column;text-align:center}.story-btns{justify-content:center}}
