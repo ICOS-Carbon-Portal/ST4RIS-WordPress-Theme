@@ -45,7 +45,7 @@
       "units": ["px", "rem", "%"]
     },
     "layout": {
-      "contentSize": "860px",
+      "contentSize": "1100px",
       "wideSize": "1100px"
     },
     "border": {

@@ -121,6 +121,93 @@ function st4ris_save_event_meta( $post_id ) {
     }
 }
 
+// Shortcodes used by the editable homepage pattern.
+add_shortcode( 'st4ris_staff_stories', 'st4ris_staff_stories_shortcode' );
+function st4ris_staff_stories_shortcode() {
+    $stories = get_posts( [
+        'post_type'      => 'staff_story',
+        'posts_per_page' => 6,
+        'post_status'    => 'publish',
+        'orderby'        => 'menu_order date',
+        'order'          => 'ASC',
+    ] );
+
+    if ( empty( $stories ) ) {
+        $stories = [
+            [ 'icon' => '🔬', 'quote' => "The types of workshops or courses presented to me are limited and are often rather inconvenient, and I need to seek them out myself. I don't always know what courses are relevant to me or what is even available.", 'by' => 'Lab technician, limnology' ],
+            [ 'icon' => '🌲', 'quote' => 'The job title is sometimes a challenge in itself. It is extremely broad and is used within every field of natural sciences. Contacting colleagues with the same title for help often does not lead to a solution since they have completely different backgrounds.', 'by' => 'Research engineer, forest ecology' ],
+            [ 'icon' => '💧', 'quote' => "In my current position within research infrastructure, I have felt that I have started to approach the 'roof' of what I can learn at my job. I don't see a long future here if I can't find opportunities to grow and develop my skills.", 'by' => 'Lab technician, limnology' ],
+        ];
+    }
+
+    ob_start();
+    echo '<div class="story-carousel"><div class="story-track st4ris-carousel-track" id="st4ris-track">';
+    foreach ( $stories as $story ) {
+        echo '<div class="story-slide">';
+        if ( is_array( $story ) ) {
+            echo '<div class="story-photo-placeholder">' . esc_html( $story['icon'] ) . '</div>';
+            echo '<blockquote>"' . esc_html( $story['quote'] ) . '"<footer>' . esc_html( $story['by'] ) . '</footer></blockquote>';
+        } else {
+            if ( has_post_thumbnail( $story ) ) {
+                echo get_the_post_thumbnail( $story, 'thumbnail', [ 'class' => 'story-photo-placeholder' ] );
+            } else {
+                echo '<div class="story-photo-placeholder">“</div>';
+            }
+            $quote = wp_strip_all_tags( $story->post_content ?: $story->post_excerpt );
+            echo '<blockquote>"' . esc_html( $quote ) . '"<footer>' . esc_html( get_the_title( $story ) ) . '</footer></blockquote>';
+        }
+        echo '</div>';
+    }
+    echo '</div></div><div class="story-dots">';
+    $count = count( $stories );
+    for ( $i = 0; $i < $count; $i++ ) {
+        echo '<button class="dot st4ris-dot' . ( 0 === $i ? ' active' : '' ) . '" aria-label="Story ' . esc_attr( $i + 1 ) . '"></button>';
+    }
+    echo '</div><div class="story-btns"><button id="st4ris-prev">← Prev</button><button id="st4ris-next">Next →</button></div>';
+    return ob_get_clean();
+}
+
+add_shortcode( 'st4ris_events', 'st4ris_events_shortcode' );
+function st4ris_events_shortcode() {
+    $events = get_posts( [
+        'post_type'      => 'st4ris_event',
+        'posts_per_page' => 3,
+        'post_status'    => 'publish',
+        'orderby'        => 'meta_value date',
+        'meta_key'       => 'event_date',
+        'order'          => 'ASC',
+    ] );
+
+    ob_start();
+    echo '<div class="events-grid">';
+    if ( empty( $events ) ) {
+        $events = [
+            [ 'type' => 'event', 'title' => 'ST4RIS @ BioGeoMon meeting', 'meta' => 'Umeå, 8–12 June', 'text' => 'Pilot survey on user needs for information dissemination' ],
+            [ 'type' => 'event', 'title' => 'ST4RIS @ ICOS meeting', 'meta' => 'Lund, 15–17 September', 'text' => 'Survey to poll user needs' ],
+            [ 'type' => 'achievement', 'title' => 'ST4RIS Kick-off meeting', 'meta' => 'Helsinki, 6–7 October', 'text' => 'Stay tuned for updates' ],
+        ];
+    }
+
+    foreach ( $events as $event ) {
+        if ( is_array( $event ) ) {
+            $type = $event['type']; $title = $event['title']; $meta = $event['meta']; $text = $event['text'];
+        } else {
+            $type = get_post_meta( $event->ID, 'event_type', true ) ?: 'event';
+            $title = get_the_title( $event );
+            $date = get_post_meta( $event->ID, 'event_date', true );
+            $location = get_post_meta( $event->ID, 'event_location', true );
+            $meta = trim( $location . ( $location && $date ? ', ' : '' ) . $date );
+            $text = wp_strip_all_tags( $event->post_content );
+        }
+        echo '<div class="event-card"><div class="event-type ' . esc_attr( $type ) . '">' . esc_html( ucfirst( $type ) ) . '</div><h3>' . esc_html( $title ) . '</h3>';
+        if ( $meta ) echo '<p>' . esc_html( $meta ) . '</p>';
+        if ( $text ) echo '<p class="event-note">' . esc_html( $text ) . '</p>';
+        echo '</div>';
+    }
+    echo '</div>';
+    return ob_get_clean();
+}
+
 // Theme support
 add_action( 'after_setup_theme', 'st4ris_setup' );
 function st4ris_setup() {
