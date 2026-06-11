@@ -20,8 +20,8 @@ main,.wp-block-post-content,.entry-content{margin:0!important}
 
 /* NAV */
 .site-header{background:#1a3a4a!important;position:sticky;top:0;z-index:100;padding:0 2rem;width:100%}
-.site-header > .wp-block-group{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0!important}
-.site-header .custom-logo,.site-header .wp-block-site-logo img,.st4ris-header-logo{max-height:36px;width:auto;display:block}.st4ris-header-logo-link{display:flex;align-items:center;flex-shrink:0}.st4ris-main-logo{height:auto}
+.site-header > .wp-block-group{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;padding:0!important}
+.site-header .custom-logo,.site-header .wp-block-site-logo img,.st4ris-header-logo{max-height:48px;width:auto;display:block}.st4ris-header-logo-link{display:flex;align-items:center;flex-shrink:0}.st4ris-main-logo{height:auto}
 .site-header .wp-block-navigation{gap:2rem}
 .site-header .wp-block-navigation a{color:#b8d4d4!important;font-size:.9rem;font-weight:500;padding:4px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;text-decoration:none}
 .site-header .wp-block-navigation a:hover{color:#fff!important;border-bottom-color:#2dc08a}

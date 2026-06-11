@@ -27,6 +27,16 @@ function st4ris_enqueue_styles() {
     );
 }
 
+// Favicon / site icons.
+add_action( 'wp_head', 'st4ris_favicons' );
+add_action( 'admin_head', 'st4ris_favicons' );
+function st4ris_favicons() {
+    $base = get_stylesheet_directory_uri() . '/assets/images/favicons';
+    echo '<link rel="icon" href="' . esc_url( $base . '/favicon.ico' ) . '" sizes="any">' . "\n";
+    echo '<link rel="icon" type="image/png" href="' . esc_url( $base . '/favicon-192.png' ) . '" sizes="192x192">' . "\n";
+    echo '<link rel="apple-touch-icon" href="' . esc_url( $base . '/apple-touch-icon.png' ) . '" sizes="180x180">' . "\n";
+}
+
 // Register block patterns
 add_action( 'init', 'st4ris_register_patterns' );
 function st4ris_register_patterns() {
