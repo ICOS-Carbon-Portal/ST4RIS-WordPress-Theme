@@ -38,6 +38,15 @@ a{text-decoration:none;color:inherit}
 .home section,.home .intro,.home .features,.home .stories,.home .events,.home .involved,.home .consortium{padding:3rem max(2rem,calc((100% - 1100px)/2))}.home .intro > *,.home .features > *,.home .stories > *,.home .events > *,.home .involved > *,.home .consortium > *{margin-left:0!important;margin-right:0!important}.home .inner{max-width:1100px;margin:0 auto}.home h2{font-size:1.5rem;font-weight:700;color:#1a3a4a;margin-bottom:1.5rem;line-height:1.25}.home h3{line-height:1.3}.home p{line-height:1.7}
 
 /* INTRO */
+/* PARTNER STRIP */
+.home section.collaboration{background:#f5f9f8;margin-block-start:0;padding-top:0;padding-bottom:2rem;text-align:left}
+.home .collaboration::before{content:"";display:block;max-width:1100px;margin:0 auto 1.5rem;border-top:1px solid #d8e6e1}
+.home .collaboration .collaboration-label{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#4a6a6a;margin:0 auto 1rem 0!important;line-height:1.5}
+.home .collaboration-logos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;gap:clamp(1rem,5vw,3rem);max-width:360px;margin:0 auto 0 0!important}
+.home .collaboration-logos a{display:flex;align-items:center;justify-content:flex-start;padding:.5rem 0;min-width:0;border-radius:6px}
+.home .collaboration-logos a:focus-visible{outline:3px solid #167a66;outline-offset:4px}
+.home .collaboration-logos img{display:block;width:150px;max-width:100%;height:64px;object-fit:contain}
+
 .home .intro{background:#f5f9f8}.home .intro p{font-size:1rem;line-height:1.7;color:#2a4a4a;margin-bottom:.75rem;max-width:860px;margin-left:0;margin-right:auto}
 
 /* FEATURE CARDS */

@@ -62,6 +62,20 @@
 </div>
 <!-- /wp:group -->
 
+<!-- wp:group {"tagName":"section","align":"full","className":"collaboration","layout":{"type":"constrained","contentSize":"1100px"}} -->
+<section class="wp-block-group alignfull collaboration">
+  <!-- wp:heading {"className":"collaboration-label"} -->
+  <h2 class="wp-block-heading collaboration-label">A collaboration between</h2>
+  <!-- /wp:heading -->
+  <!-- wp:html -->
+  <div class="collaboration-logos">
+    <a href="https://www.icos-cp.eu/"><img src="/wp-content/themes/st4ris/assets/images/icos-logo.svg" alt="ICOS" loading="lazy"></a>
+    <a href="https://elter-ri.eu/"><img src="/wp-content/themes/st4ris/assets/images/elter-logo.svg" alt="eLTER" loading="lazy"></a>
+  </div>
+  <!-- /wp:html -->
+</section>
+<!-- /wp:group -->
+
 <!-- wp:group {"align":"full","className":"features","layout":{"type":"constrained","contentSize":"1100px"}} -->
 <div class="wp-block-group alignfull features">
   <!-- wp:group {"className":"cards","layout":{"type":"default"}} -->
